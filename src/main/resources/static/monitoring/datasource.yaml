@@ -1,0 +1,8 @@
+datasources:
+  - name: local
+    type: prometheus
+    access: server
+    orgId: 1
+    url: http://host.docker.internal:9090
+    version: 1
+    editable: true
