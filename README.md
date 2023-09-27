@@ -38,6 +38,10 @@ Now on your machine different services are available:
 
 See [docker-compose.yml](./docker-compose.yml) for all services.
 
+Grafana dashboards:
+- https://grafana.com/grafana/dashboards/6756-spring-boot-statistics/
+- Ideally there would be a standard dashboard for endpoints and another for database connections.
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
