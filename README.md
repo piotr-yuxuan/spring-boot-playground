@@ -14,7 +14,7 @@ mvn spring-boot:start
 mvn spring-boot:stop
 ```
 
-Observability root path: http://localhost:8080/actuator.
+# Docker dependency services
 
 Clean local Docker environments:
 
@@ -31,12 +31,17 @@ docker compose up
 docker compose up --force-recreate --renew-anon-volumes
 ```
 
+See [docker-compose.yml](./docker-compose.yml) for all services.
+
+# Observability
+
+We use Spring Boot actuator to gather several metrics. It is exposed here: http://localhost:8080/actuator.
+
 Now on your machine different services are available:
 
+- Swagger UI: http://localhost:3001
 - Grafana: http://localhost:3000
 - Prometheus: http://localhost:9090
-
-See [docker-compose.yml](./docker-compose.yml) for all services.
 
 Grafana dashboards:
 - https://grafana.com/grafana/dashboards/6756-spring-boot-statistics/
