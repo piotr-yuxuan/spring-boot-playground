@@ -1,9 +1,18 @@
-# Read Me First
-The following was discovered as part of building this project:
+# `com.github.piotryuxuan.springbootplayground`
 
-* The original package name 'com.github.piotr-yuxuan.spring-boot-playground' is invalid and this project uses 'com.github.piotryuxuan.springbootplayground' instead.
+This is a simple project to demonstrate usage of:
+  - Java 21 (LTS)
+  - Spring Boot
+  - React (single-page application)
+  - PostgreSQL
 
 # Getting Started
+
+``` zsh
+mvn spring-boot:run
+mvn spring-boot:start
+mvn spring-boot:stop
+```
 
 ### Reference Documentation
 For further reference, please consider the following sections:
