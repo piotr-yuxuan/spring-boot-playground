@@ -1,4 +1,4 @@
-# `com.github.piotryuxuan.springbootplayground`
+# `springbootplayground`
 
 This is a simple project to demonstrate usage of:
   - Java 21 (LTS)
