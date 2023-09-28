@@ -73,7 +73,7 @@ See [docker-compose.yml](./docker-compose.yml) for all services.
 Now on your machine different services are available:
 
 - Swagger UI: http://localhost:3001
-- Grafana: http://localhost:3000
+- Grafana: http://localhost:3002
 - Prometheus: http://localhost:9090
 
 ![](./doc/OpenAPI.png)

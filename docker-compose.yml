@@ -22,7 +22,7 @@ services:
       - ./src/main/resources/static/monitoring/dashboard.yaml:/etc/grafana/provisioning/dashboards/dashboard.yaml
       - ./src/main/resources/static/monitoring/dashboard.json:/etc/dashboards/spring-boot-grafana-dashboard.json:rw
     ports:
-      - 3000:3000
+      - 3002:3000
 
   swagger-ui:
     image: swaggerapi/swagger-ui:latest
