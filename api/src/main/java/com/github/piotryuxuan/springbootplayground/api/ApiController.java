@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+// FIXME More compelling example with a service, and access to database. (p. 328 / 584)
+// FIXME Don't load static resources so frontend and backend are decoupled.
+
 @RestController
 @RequestMapping("/api/v1")
 public class ApiController {
