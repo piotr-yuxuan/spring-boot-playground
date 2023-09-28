@@ -5,7 +5,7 @@ This is a simple project to demonstrate usage of:
   - Spring Boot
   - React (single-page application)
 
-![](./doc/Spring playground.jpg)
+![](./doc/Spring%20playground.jpg)
 
 # Getting Started
 
