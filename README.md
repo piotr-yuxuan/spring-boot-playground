@@ -1,10 +1,22 @@
 # Playground
 
 This is a simple project to demonstrate usage of:
-  - Java 21 (LTS) and Spring Boot
-  - TypeScript and React (single-page application)
+  - (API) Java 21 (LTS) and Spring Boot
+  - (client) TypeScript and React (single-page application)
+
+The API and the client are decoupled: their only touchpoint is the API contract. They could actually be two different projects in two different repositories.
 
 ![](./doc/Spring%20playground.jpg)
+
+# Deployment
+
+The API could be deployed as a Docker image in an ECS instance while the client can be independently deployed to an S3 bucket served in a CloudFront distribution.
+
+#### Scaling out and increasing availability
+
+Of course, such simple project doesn't need horizontal scaling, but in a real setting you would wrap three ECS instances into a autoscaling group: that would also improve the API availability. One could use Kubernetes (AWS EKS) if already available, but for such a simple service it would be overkill.
+
+A further way to improve scability and availability would be to rearchitect the API into AWS API Gateway and use Lambda functions for each operation.
 
 # Getting Started
 
