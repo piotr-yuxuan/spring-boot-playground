@@ -66,6 +66,18 @@ Of course it doesn't have a lot of meaning to run such simulation a local comput
 
 A note on AWS resources: instances should be in the same availability zone (ha ha), and Elastic Fabric Adapter network interface should help make the CPU and memory the limiting factors, not the network IO.
 
+# Latency graphs
+
+Using https://github.com/giltene/wrk2:
+
+``` zsh
+wrk --threads 2 --connections 10 --duration 45s --rate 3000 --latency http://localhost:8080/api/v1/addition\?a\=1\&b\=2 | wrk2img result-$(gdate +"%Y-%m-%dT%H:%M:%S.%3N").png
+```
+
+![](./doc/Latency%20graph%20at%206000%20req%20per%20s.png)
+
+The API operation under test is so simple and pure (a mathematical addition) that this graph doesn't really test anything except the Spring Boot framework itself running on a local machine.
+
 # Reference Documentation
 
 For further reference, please consider the following sections:
