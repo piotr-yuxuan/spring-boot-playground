@@ -16,7 +16,7 @@ mvn spring-boot:start
 mvn spring-boot:stop
 ```
 
-The client uses Bun. From the doc:
+I try to use Bun, currently at version 1.0.3 (so quite fresh, expect some rough edges). From the doc:
 
 > Bun is an all-in-one toolkit for JavaScript and TypeScript apps. It ships as a single executable called `bun​`.
 >
@@ -30,12 +30,25 @@ and generated this project with:
 
 ``` zsh
 bun create react-app client --template typescript
+bun add -d bun-types
 ```
 
 Start the frontend project with:
 
 ``` zsh
 bun start
+```
+
+While very promising, it's not yet clear how to handle `index.html` in Bun. Because of that, I default on Node to build a deployable bundle:
+
+``` zsh
+node run build
+```
+
+Then the bundle can be served locally, as if it were from a CloudFront distribution:
+
+``` zsh
+bunx serve build
 ```
 
 # Docker dependency services
