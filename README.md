@@ -16,17 +16,27 @@ mvn spring-boot:start
 mvn spring-boot:stop
 ```
 
-The client is a project generated with:
-
-``` zsh
-yarn create react-app client --template typescript
-```
-
-Then Bun is then used. From the doc:
+The client uses Bun. From the doc:
 
 > Bun is an all-in-one toolkit for JavaScript and TypeScript apps. It ships as a single executable called `bun​`.
-
+>
 > At its core is the Bun runtime, a fast JavaScript runtime designed as a drop-in replacement for Node.js. It's written in Zig and powered by JavaScriptCore under the hood, dramatically reducing startup times and memory usage.
+
+I followed:
+- https://bun.sh/docs/typescript
+- https://create-react-app.dev/docs/adding-typescript
+
+and generated this project with:
+
+``` zsh
+bun create react-app client --template typescript
+```
+
+Start the frontend project with:
+
+``` zsh
+bun start
+```
 
 # Docker dependency services
 
