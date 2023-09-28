@@ -1,5 +1,7 @@
 # Playground
 
+Send computations from a web UI to an API, display the results.
+
 This is a simple project to demonstrate usage of:
   - (API) Java 21 (LTS) and Spring Boot
   - (client) TypeScript and React (single-page application)
