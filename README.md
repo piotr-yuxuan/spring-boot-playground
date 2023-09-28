@@ -1,10 +1,11 @@
-# `springbootplayground`
+# `spring-boot-playground`
 
 This is a simple project to demonstrate usage of:
   - Java 21 (LTS)
   - Spring Boot
   - React (single-page application)
-  - PostgreSQL
+
+![](./doc/Spring playground.jpg)
 
 # Getting Started
 
@@ -43,9 +44,13 @@ Now on your machine different services are available:
 - Grafana: http://localhost:3000
 - Prometheus: http://localhost:9090
 
+![](./doc/OpenAPI.png)
+
 Grafana dashboards:
 - https://grafana.com/grafana/dashboards/6756-spring-boot-statistics/
 - Ideally there would be a standard dashboard for endpoints and another for database connections.
+
+![](./doc/Grafana.png)
 
 # Load Simulation
 
@@ -56,6 +61,8 @@ mvn gatling:test
 ```
 
 Of course it doesn't have a lot of meaning to run such simulation a local computer with a lot of different possible perturbation. An isolated, network-optimised environment in AWS is more repeatable. Still, it can give a rough, uneducated hint at the performance. Keep in mind that your local machine may have a limitation on the number of open file descriptors (`ulimit`), which further degrades the ability to simulate high load.
+
+![](./doc/Gatling.png)
 
 A note on AWS resources: instances should be in the same availability zone (ha ha), and Elastic Fabric Adapter network interface should help make the CPU and memory the limiting factors, not the network IO.
 
