@@ -1,19 +1,32 @@
-# `spring-boot-playground`
+# Playground
 
 This is a simple project to demonstrate usage of:
-  - Java 21 (LTS)
-  - Spring Boot
-  - React (single-page application)
+  - Java 21 (LTS) and Spring Boot
+  - TypeScript and React (single-page application)
 
 ![](./doc/Spring%20playground.jpg)
 
 # Getting Started
+
+The API is a project generated on https://start.spring.io/ with some other dependencies added on a ad-hoc basis.
 
 ``` zsh
 mvn spring-boot:run
 mvn spring-boot:start
 mvn spring-boot:stop
 ```
+
+The client is a project generated with:
+
+``` zsh
+yarn create react-app client --template typescript
+```
+
+Then Bun is then used. From the doc:
+
+> Bun is an all-in-one toolkit for JavaScript and TypeScript apps. It ships as a single executable called `bun​`.
+
+> At its core is the Bun runtime, a fast JavaScript runtime designed as a drop-in replacement for Node.js. It's written in Zig and powered by JavaScriptCore under the hood, dramatically reducing startup times and memory usage.
 
 # Docker dependency services
 
@@ -34,10 +47,6 @@ docker compose up --force-recreate --renew-anon-volumes
 
 See [docker-compose.yml](./docker-compose.yml) for all services.
 
-# Observability
-
-We use Spring Boot actuator to gather several metrics. It is exposed here: http://localhost:8080/actuator.
-
 Now on your machine different services are available:
 
 - Swagger UI: http://localhost:3001
@@ -51,6 +60,10 @@ Grafana dashboards:
 - Ideally there would be a standard dashboard for endpoints and another for database connections.
 
 ![](./doc/Grafana.png)
+
+# Observability
+
+We use Spring Boot actuator to gather several metrics. It is exposed here: http://localhost:8080/actuator, scraped by Prometheus and exposed to Grafana as « local » datasource.
 
 # Load Simulation
 
